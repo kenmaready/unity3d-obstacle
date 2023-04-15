@@ -7,11 +7,7 @@ public class ScoreKeeper : MonoBehaviour
 {
 
     int score = 0;
-    TextMeshProUGUI display;
-
-    void Awake() {
-        display = FindObjectOfType<TextMeshProUGUI>();
-    }
+    [SerializeField] TextMeshProUGUI display;
 
     public int GetScore() {
         return score;

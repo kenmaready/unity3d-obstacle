@@ -19,9 +19,11 @@ public class Mover : MonoBehaviour {
 
     void Update()
     {
-        float xVal = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        float zVal = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        float zVal = -Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
+        float xVal = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
         
+        // "Horizontal" moves up and doan and "Vertical" side to side
+        // because game screen is rotated 90 degrees.
         transform.Translate(xVal, 0, zVal);
     }
 
